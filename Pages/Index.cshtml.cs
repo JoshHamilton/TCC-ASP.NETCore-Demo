@@ -12,8 +12,7 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
-    public void OnGet()
-    {
-
+    public void OnGet() {
+        _logger.LogInformation("Index page visited at {Time}", DateTime.UtcNow);
     }
 }
