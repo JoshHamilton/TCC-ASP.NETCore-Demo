@@ -13,29 +13,36 @@
     <a asp-page="./DeleteAll" class="btn btn-danger">Delete All</a>
 </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Class Name</th>
-            <th>Class Description</th>
-            <th>Units</th>
-            <th>Quarter</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var classItem in Model.Classes)
-        {
+@if (Model.Classes.Count == 0)
+{
+    <p>No classes scheduled.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>@classItem.ClassName</td>
-                <td>@classItem.ClassDescription</td>
-                <td>@classItem.Units</td>
-                <td>@classItem.Quarter</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@classItem.Id">Edit</a> |
-                    <a asp-page="./Delete" asp-route-id="@classItem.Id">Delete</a>
-                </td>
+                <th>Class Name</th>
+                <th>Class Description</th>
+                <th>Units</th>
+                <th>Quarter</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var classItem in Model.Classes)
+            {
+                <tr>
+                    <td>@classItem.ClassName</td>
+                    <td>@classItem.ClassDescription</td>
+                    <td>@classItem.Units</td>
+                    <td>@classItem.Quarter</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@classItem.Id">Edit</a> |
+                        <a asp-page="./Delete" asp-route-id="@classItem.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
