@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         <label asp-for="Class.Units" class="control-label"></label>
-        <input asp-for="Class.Units" class="form-control" />
+        <input asp-for="Class.Units" class="form-control" value="@Model.Class?.Units.ToString("F1")" />
         <span asp-validation-for="Class.Units" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -39,3 +39,5 @@
         <input type="submit" value="Save" class="btn btn-primary" />
     </div>
 </form>
+
+<a asp-page="./Index">Back to List</a>

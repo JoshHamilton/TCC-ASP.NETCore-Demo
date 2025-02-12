@@ -12,6 +12,7 @@ namespace WebAppDemo.Models
         [Display(Name = "Class Description")]
         public string ClassDescription { get; set; } = string.Empty;
         [Range(0.1, double.MaxValue, ErrorMessage = "Units must be greater than 0.1.")]
+        [RegularExpression(@"^\d+(\.\d)?$", ErrorMessage = "Units only allow one decimal place.")]
         [Display(Name = "Units")]
         public decimal Units { get; set; }
         [Required(ErrorMessage = "Quarter is required.")]
