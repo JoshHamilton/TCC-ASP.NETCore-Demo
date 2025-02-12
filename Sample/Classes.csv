@@ -1,0 +1,96 @@
+ClassName,ClassDescription,Units,Quarter
+Math 101,Basic Mathematics,3,Fall
+History 201,World History,4,Winter
+Science 301,General Science,3.5,Spring
+English 101,Introduction to English Literature,3,Summer
+Physics 101,Fundamentals of Physics,4,Fall
+Chemistry 101,Introduction to Chemistry,3.5,Winter
+Biology 101,General Biology,4,Spring
+Computer Science 101,Introduction to Computer Science,3,Summer
+Art 101,Introduction to Art,2,Fall
+Music 101,Introduction to Music,2,Winter
+Philosophy 101,Introduction to Philosophy,3,Spring
+Psychology 101,Introduction to Psychology,3.5,Summer
+Sociology 101,Introduction to Sociology,3,Fall
+Economics 101,Principles of Economics,4,Winter
+Political Science 101,Introduction to Political Science,3.5,Spring
+Geography 101,Introduction to Geography,3,Summer
+Anthropology 101,Introduction to Anthropology,3,Fall
+Linguistics 101,Introduction to Linguistics,3.5,Winter
+Environmental Science 101,Introduction to Environmental Science,4,Spring
+Astronomy 101,Introduction to Astronomy,3,Summer
+Statistics 101,Introduction to Statistics,3.5,Fall
+Calculus 101,Introduction to Calculus,4,Winter
+Algebra 101,Introduction to Algebra,3,Spring
+Geometry 101,Introduction to Geometry,3.5,Summer
+Trigonometry 101,Introduction to Trigonometry,3,Fall
+Literature 101,Introduction to Literature,4,Winter
+Creative Writing 101,Introduction to Creative Writing,3.5,Spring
+Journalism 101,Introduction to Journalism,3,Summer
+Film Studies 101,Introduction to Film Studies,3.5,Fall
+Theater 101,Introduction to Theater,3,Winter
+Dance 101,Introduction to Dance,2.5,Spring
+Photography 101,Introduction to Photography,2,Summer
+Graphic Design 101,Introduction to Graphic Design,3,Fall
+Web Design 101,Introduction to Web Design,3.5,Winter
+Programming 101,Introduction to Programming,4,Spring
+Database 101,Introduction to Databases,3,Summer
+Networking 101,Introduction to Networking,3.5,Fall
+Cybersecurity 101,Introduction to Cybersecurity,4,Winter
+Artificial Intelligence 101,Introduction to AI,3.5,Spring
+Machine Learning 101,Introduction to Machine Learning,3,Summer
+Data Science 101,Introduction to Data Science,4,Fall
+Robotics 101,Introduction to Robotics,3.5,Winter
+Engineering 101,Introduction to Engineering,4,Spring
+Mechanical Engineering 101,Introduction to Mechanical Engineering,3,Summer
+Electrical Engineering 101,Introduction to Electrical Engineering,3.5,Fall
+Civil Engineering 101,Introduction to Civil Engineering,4,Winter
+Chemical Engineering 101,Introduction to Chemical Engineering,3.5,Spring
+Biomedical Engineering 101,Introduction to Biomedical Engineering,3,Summer
+Aerospace Engineering 101,Introduction to Aerospace Engineering,4,Fall
+Materials Science 101,Introduction to Materials Science,3.5,Winter
+Nanotechnology 101,Introduction to Nanotechnology,4,Spring
+Quantum Mechanics 101,Introduction to Quantum Mechanics,3,Summer
+Thermodynamics 101,Introduction to Thermodynamics,3.5,Fall
+Fluid Mechanics 101,Introduction to Fluid Mechanics,4,Winter
+Heat Transfer 101,Introduction to Heat Transfer,3.5,Spring
+Control Systems 101,Introduction to Control Systems,3,Summer
+Signal Processing 101,Introduction to Signal Processing,4,Fall
+Digital Electronics 101,Introduction to Digital Electronics,3.5,Winter
+Analog Electronics 101,Introduction to Analog Electronics,4,Spring
+Microelectronics 101,Introduction to Microelectronics,3,Summer
+Embedded Systems 101,Introduction to Embedded Systems,3.5,Fall
+VLSI Design 101,Introduction to VLSI Design,4,Winter
+Computer Architecture 101,Introduction to Computer Architecture,3.5,Spring
+Operating Systems 101,Introduction to Operating Systems,3,Summer
+Compiler Design 101,Introduction to Compiler Design,4,Fall
+Software Engineering 101,Introduction to Software Engineering,3.5,Winter
+Human-Computer Interaction 101,Introduction to HCI,4,Spring
+Game Development 101,Introduction to Game Development,3,Summer
+Mobile App Development 101,Introduction to Mobile App Development,3.5,Fall
+Cloud Computing 101,Introduction to Cloud Computing,4,Winter
+Big Data 101,Introduction to Big Data,3.5,Spring
+Internet of Things 101,Introduction to IoT,3,Summer
+Blockchain 101,Introduction to Blockchain,4,Fall
+Cryptography 101,Introduction to Cryptography,3.5,Winter
+Virtual Reality 101,Introduction to VR,4,Spring
+Augmented Reality 101,Introduction to AR,3,Summer
+Bioinformatics 101,Introduction to Bioinformatics,3.5,Fall
+Genomics 101,Introduction to Genomics,4,Winter
+Proteomics 101,Introduction to Proteomics,3.5,Spring
+Metabolomics 101,Introduction to Metabolomics,3,Summer
+Systems Biology 101,Introduction to Systems Biology,4,Fall
+Synthetic Biology 101,Introduction to Synthetic Biology,3.5,Winter
+Neuroscience 101,Introduction to Neuroscience,4,Spring
+Cognitive Science 101,Introduction to Cognitive Science,3,Summer
+Behavioral Science 101,Introduction to Behavioral Science,3.5,Fall
+Social Psychology 101,Introduction to Social Psychology,4,Winter
+Developmental Psychology 101,Introduction to Developmental Psychology,3.5,Spring
+Clinical Psychology 101,Introduction to Clinical Psychology,3,Summer
+Educational Psychology 101,Introduction to Educational Psychology,4,Fall
+Industrial Psychology 101,Introduction to Industrial Psychology,3.5,Winter
+Organizational Psychology 101,Introduction to Organizational Psychology,4,Spring
+Health Psychology 101,Introduction to Health Psychology,3,Summer
+Forensic Psychology 101,Introduction to Forensic Psychology,3.5,Fall
+Sports Psychology 101,Introduction to Sports Psychology,4,Winter
+Environmental Psychology 101,Introduction to Environmental Psychology,3.5,Spring
