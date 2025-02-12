@@ -1,9 +1,32 @@
 @page
-@model IndexModel
+@model WebAppDemo.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1>@ViewData["Title"]</h1>
+    <h1 class="display-4">TCC Classes</h1>
+    <p>Welcome to my ASP.NET coding demo for Tacoma Community College. Below is the list of classes:</p>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Class Description</th>
+            <th>Units</th>
+            <th>Quarter</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var classItem in Model.Classes)
+        {
+            <tr>
+                <td>@classItem.ClassName</td>
+                <td>@classItem.ClassDescription</td>
+                <td>@classItem.Units</td>
+                <td>@classItem.Quarter</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,18 +1,26 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using WebAppDemo.Data;
+using WebAppDemo.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace WebAppDemo.Pages;
-
-public class IndexModel : PageModel
+namespace WebAppDemo.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
+        private readonly ApplicationDbContext _context;
 
-    public void OnGet() {
-        _logger.LogInformation("Index page visited at {Time}", DateTime.UtcNow);
+        public IndexModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public IList<Class> Classes { get; set; }
+
+        public async Task OnGetAsync()
+        {
+            Classes = await _context.Classes.ToListAsync();
+        }
     }
 }
