@@ -1,32 +1,48 @@
 @page
-@model WebAppDemo.Pages.IndexModel
+@model WebAppDemo.Pages.Classes.IndexModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Classes";
 }
 
-<div class="text-center">
-    <h1 class="display-4">TCC Classes</h1>
-    <p>Welcome to my ASP.NET coding demo for Tacoma Community College. Below is the list of classes:</p>
-</div>
+<h1>Classes</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Class Name</th>
-            <th>Class Description</th>
-            <th>Units</th>
-            <th>Quarter</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var classItem in Model.Classes)
-        {
+<p>
+    <a asp-page="./Create" class="btn btn-primary">Create New</a>
+    <a asp-page="./Import" class="btn btn-secondary">Import</a>
+    <a asp-page="./Export" class="btn btn-secondary">Export</a>
+    <a asp-page="./DeleteAll" class="btn btn-danger">Delete All</a>
+</p>
+
+@if (Model.Classes.Count == 0)
+{
+    <p>No classes scheduled.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>@classItem.ClassName</td>
-                <td>@classItem.ClassDescription</td>
-                <td>@classItem.Units</td>
-                <td>@classItem.Quarter</td>
+                <th>Class Name</th>
+                <th>Class Description</th>
+                <th>Units</th>
+                <th>Quarter</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var classItem in Model.Classes)
+            {
+                <tr>
+                    <td>@classItem.ClassName</td>
+                    <td>@classItem.ClassDescription</td>
+                    <td>@classItem.Units</td>
+                    <td>@classItem.Quarter</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@classItem.Id">Edit</a> |
+                        <a asp-page="./Delete" asp-route-id="@classItem.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
