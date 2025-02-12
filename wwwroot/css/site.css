@@ -38,7 +38,7 @@ h1 {
 }
 
 .table th {
-  background-color: #0388A6;
+  background-color: #023059; /* Different color for the header */
   color: #F2F2F2;
   padding: 10px;
 }
@@ -50,12 +50,21 @@ h1 {
   border: 1px solid #8C704F;
 }
 
-.table tr:nth-child(even) {
-  background-color: #F2B84B;
+.table tr:nth-child(even) td {
+  background-color: #E0E0E0; /* Light gray for even rows */
 }
 
-.table tr:nth-child(odd) {
-  background-color: #F2F2F2;
+.table tr:nth-child(odd) td {
+  background-color: #F2F2F2; /* White for odd rows */
+}
+
+table tbody tr:hover td {
+  background-color: #0388A6 !important; /* Accessible blue color */
+  color: #f2f2f2;
+}
+
+table tbody tr:hover td a {
+  color: #F2B84B;
 }
 
 .navbar {
@@ -83,6 +92,14 @@ h1 {
   white-space: nowrap;
   line-height: 60px;
   text-align: center;
+}
+
+.footer a {
+  color: #F2F2F2;
+}
+
+.footer a:hover {
+  color: #F2B84B;
 }
 
 .btn-primary {
