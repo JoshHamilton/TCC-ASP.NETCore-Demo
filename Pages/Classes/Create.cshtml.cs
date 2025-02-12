@@ -12,6 +12,8 @@ namespace WebAppDemo.Pages.Classes
         public CreateModel(ApplicationDbContext context)
         {
             _context = context;
+            Class = new Class(); // Initialize the Class property with a default value
+
         }
 
         public IActionResult OnGet()
@@ -28,15 +30,13 @@ namespace WebAppDemo.Pages.Classes
                 return Page();
             }
 
-            if (Class != null)
-            {
-                _context.Classes.Add(Class);
-                await _context.SaveChangesAsync();
-            }
+            _context.Classes.Add(Class);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
 
-        public Class? Class { get; set; }
+        [BindProperty]
+        public Class Class { get; set; }
     }
 }

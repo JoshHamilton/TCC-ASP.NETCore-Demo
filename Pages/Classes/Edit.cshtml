@@ -1,0 +1,34 @@
+@page "{id:int}"
+@model WebAppDemo.Pages.Classes.EditModel
+@{
+    ViewData["Title"] = "Edit Class";
+}
+
+<h1>Edit Class</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Class.Id" />
+    <div class="form-group">
+        <label asp-for="Class.ClassName" class="control-label"></label>
+        <input asp-for="Class.ClassName" class="form-control" />
+        <span asp-validation-for="Class.ClassName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class.ClassDescription" class="control-label"></label>
+        <input asp-for="Class.ClassDescription" class="form-control" />
+        <span asp-validation-for="Class.ClassDescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class.Units" class="control-label"></label>
+        <input asp-for="Class.Units" class="form-control" />
+        <span asp-validation-for="Class.Units" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class.Quarter" class="control-label"></label>
+        <input asp-for="Class.Quarter" class="form-control" />
+        <span asp-validation-for="Class.Quarter" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>

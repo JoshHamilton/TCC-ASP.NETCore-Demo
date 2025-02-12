@@ -1,0 +1,36 @@
+@page
+@model WebAppDemo.Pages.Classes.IndexModel
+@{
+    ViewData["Title"] = "Classes";
+}
+
+<h1>Classes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Class Description</th>
+            <th>Units</th>
+            <th>Quarter</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var classItem in Model.Classes)
+        {
+            <tr>
+                <td>@classItem.ClassName</td>
+                <td>@classItem.ClassDescription</td>
+                <td>@classItem.Units</td>
+                <td>@classItem.Quarter</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@classItem.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@classItem.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Create">Create New</a>
