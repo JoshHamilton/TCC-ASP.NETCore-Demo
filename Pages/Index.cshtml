@@ -1,17 +1,15 @@
 @page
-@model WebAppDemo.Pages.Classes.IndexModel
+@model WebAppDemo.Pages.IndexModel
 @{
-    ViewData["Title"] = "Classes";
+    ViewData["Title"] = "Home Page";
 }
 
-<h1>Classes</h1>
-
-<p>
-    <a asp-page="./Create" class="btn btn-primary">Create New</a>
-    <a asp-page="./Import" class="btn btn-secondary">Import</a>
-    <a asp-page="./Export" class="btn btn-secondary">Export</a>
-    <a asp-page="./DeleteAll" class="btn btn-danger">Delete All</a>
-</p>
+<div class="header-image">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to WebAppDemo</h1>
+        <p>Welcome to the WebAppDemo. Below is the list of classes:</p>
+    </div>
+</div>
 
 @if (Model.Classes.Count == 0)
 {
@@ -19,14 +17,13 @@
 }
 else
 {
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Class Name</th>
                 <th>Class Description</th>
                 <th>Units</th>
                 <th>Quarter</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,10 +34,6 @@ else
                     <td>@classItem.ClassDescription</td>
                     <td>@classItem.Units</td>
                     <td>@classItem.Quarter</td>
-                    <td>
-                        <a asp-page="./Edit" asp-route-id="@classItem.Id">Edit</a> |
-                        <a asp-page="./Delete" asp-route-id="@classItem.Id">Delete</a>
-                    </td>
                 </tr>
             }
         </tbody>
