@@ -1,0 +1,14 @@
+@page
+@model WebAppDemo.Pages.Classes.DeleteAllModel
+@{
+    ViewData["Title"] = "Delete All Classes";
+}
+
+<h1>Delete All Classes</h1>
+
+<p>Are you sure you want to delete all classes?</p>
+
+<form method="post">
+    <input type="submit" value="Delete All" class="btn btn-danger" />
+    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+</form>
