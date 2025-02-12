@@ -12,6 +12,7 @@ namespace WebAppDemo.Models
         [Range(0.1, double.MaxValue, ErrorMessage = "Units must be greater than 0.")]
         public decimal Units { get; set; }
         [Required(ErrorMessage = "Quarter is required.")]
+        [RegularExpression("Fall|Winter|Spring|Summer", ErrorMessage = "Quarter must be one of the following: Fall, Winter, Spring, Summer.")]
         public string Quarter { get; set; } = string.Empty;
     }
 }

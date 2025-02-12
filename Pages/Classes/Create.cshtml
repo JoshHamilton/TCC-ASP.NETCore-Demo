@@ -25,7 +25,13 @@
     </div>
     <div class="form-group">
         <label asp-for="Class.Quarter" class="control-label"></label>
-        <input asp-for="Class.Quarter" class="form-control" />
+        <select asp-for="Class.Quarter" class="form-control">
+            <option value="">Select Quarter</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+        </select>
         <span asp-validation-for="Class.Quarter" class="text-danger"></span>
     </div>
     <div class="form-group">
