@@ -103,25 +103,36 @@ table tbody tr:hover td a {
 }
 
 .btn-primary {
-  background-color: #0388A6;
+  background-color: #0388A6; /* Theme color */
   border-color: #0388A6;
   color: #F2F2F2;
 }
 
 .btn-primary:hover {
-  background-color: #023059;
+  background-color: #023059; /* Theme color */
   border-color: #023059;
 }
 
 .btn-secondary {
-  background-color: #8C704F;
+  background-color: #8C704F; /* Theme color */
   border-color: #8C704F;
   color: #F2F2F2;
 }
 
 .btn-secondary:hover {
-  background-color: #6B5037;
+  background-color: #6B5037; /* Theme color */
   border-color: #6B5037;
+}
+
+.btn-danger {
+  background-color: #F2B84B; /* Theme color */
+  border-color: #F2B84B;
+  color: #023059;
+}
+
+.btn-danger:hover {
+  background-color: #E0A72B; /* Slightly darker shade */
+  border-color: #E0A72B;
 }
 
 .form-control {
@@ -142,9 +153,6 @@ table tbody tr:hover td a {
   text-align: start;
 }
 
-.head-image::before {
-  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, #000 98%);
-}
 .header-image {
   background-image: url('../images/campus-walkway-mobile.jpg');
   background-size: cover;
