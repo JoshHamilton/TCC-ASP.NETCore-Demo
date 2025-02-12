@@ -14,6 +14,7 @@ namespace WebAppDemo.Pages
         public IndexModel(ApplicationDbContext context)
         {
             _context = context;
+            Classes = new List<Class>();
         }
 
         public IList<Class> Classes { get; set; }
