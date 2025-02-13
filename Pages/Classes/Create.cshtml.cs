@@ -12,8 +12,7 @@ namespace WebAppDemo.Pages.Classes
         public CreateModel(ApplicationDbContext context)
         {
             _context = context;
-            Class = new Class(); // Initialize the Class property with a default value
-
+            Class = new Class { Units = 0.0m }; // Initialize the Units property with a default value of 0.0
         }
 
         public IActionResult OnGet(string returnUrl = null)
