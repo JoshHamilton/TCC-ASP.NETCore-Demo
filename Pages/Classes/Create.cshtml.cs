@@ -16,8 +16,9 @@ namespace WebAppDemo.Pages.Classes
 
         }
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(string returnUrl = null)
         {
+            ReturnUrl = returnUrl;
             return Page();
         }
 
@@ -38,5 +39,7 @@ namespace WebAppDemo.Pages.Classes
 
         [BindProperty]
         public Class Class { get; set; }
+
+        public string ReturnUrl { get; set; }
     }
 }
