@@ -3,39 +3,40 @@
 @{
     ViewData["Title"] = "Classes at Tacoma Community College";
 }
-
-<div class="header-image">
-    <div class="text-center">
-        <h1 class="display-4">Demo of developing with C#, ASP.NET Core, Razor Pages, SQL Database, Bootstrap, HTML, CSS, JavaScript, jQuery</h1>
-        <p>View and manage available classes at Tacoma Community College</p>
+<main role="main">
+    <div class="header-image">
+        <div class="text-center">
+            <h1 class="display-4">Demo of developing with C#, ASP.NET Core, Razor Pages, SQL Database, Bootstrap, HTML, CSS, JavaScript, jQuery</h1>
+            <p>View and manage available classes at Tacoma Community College</p>
+        </div>
     </div>
-</div>
 
-@if (Model.Classes.Count == 0)
-{
-    <p>No classes scheduled.</p>
-}
-else
-{
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="sortable">Class Name</th>
-                <th class="sortable">Class Description</th>
-                <th class="sortable">Units</th>
-                <th class="sortable">Quarter</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var classItem in Model.Classes)
-            {
+    @if (Model.Classes.Count == 0)
+    {
+        <p>No classes scheduled.</p>
+    }
+    else
+    {
+        <table class="table table-striped" role="table">
+            <thead>
                 <tr>
-                    <td>@classItem.ClassName</td>
-                    <td>@classItem.ClassDescription</td>
-                    <td>@classItem.Units</td>
-                    <td>@classItem.Quarter</td>
+                    <th scope="col" class="sortable">Class Name</th>
+                    <th scope="col" class="sortable">Class Description</th>
+                    <th scope="col" class="sortable">Units</th>
+                    <th scope="col" class="sortable">Quarter</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var classItem in Model.Classes)
+                {
+                    <tr>
+                        <td>@classItem.ClassName</td>
+                        <td>@classItem.ClassDescription</td>
+                        <td>@classItem.Units</td>
+                        <td>@classItem.Quarter</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</main>

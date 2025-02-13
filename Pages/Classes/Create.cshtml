@@ -3,39 +3,40 @@
 @{
     ViewData["Title"] = "Create Class";
 }
+<main role="main">
+    <h1>Create Class</h1>
 
-<h1>Create Class</h1>
-
-<form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Class.ClassName" class="control-label"></label>
-        <input asp-for="Class.ClassName" class="form-control" />
-        <span asp-validation-for="Class.ClassName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Class.ClassDescription" class="control-label"></label>
-        <input asp-for="Class.ClassDescription" class="form-control" />
-        <span asp-validation-for="Class.ClassDescription" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Class.Units" class="control-label"></label>
-        <input asp-for="Class.Units" class="form-control" placeholder="0.0" value="0.0" />
-        <span asp-validation-for="Class.Units" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Class.Quarter" class="control-label"></label>
-        <select asp-for="Class.Quarter" class="form-control">
-            <option value="">Select Quarter</option>
-            <option value="Fall">Fall</option>
-            <option value="Winter">Winter</option>
-            <option value="Spring">Spring</option>
-            <option value="Summer">Summer</option>
-        </select>
-        <span asp-validation-for="Class.Quarter" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
-        <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
-    </div>
-</form>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Class.ClassName" class="control-label"></label>
+            <input asp-for="Class.ClassName" class="form-control" aria-required="true" />
+            <span asp-validation-for="Class.ClassName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Class.ClassDescription" class="control-label"></label>
+            <input asp-for="Class.ClassDescription" class="form-control" aria-required="true" />
+            <span asp-validation-for="Class.ClassDescription" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Class.Units" class="control-label"></label>
+            <input asp-for="Class.Units" class="form-control" placeholder="0.0" value="0.0" aria-required="true" />
+            <span asp-validation-for="Class.Units" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Class.Quarter" class="control-label"></label>
+            <select asp-for="Class.Quarter" class="form-control" aria-required="true">
+                <option value="">Select Quarter</option>
+                <option value="Fall">Fall</option>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+            </select>
+            <span asp-validation-for="Class.Quarter" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</main>
