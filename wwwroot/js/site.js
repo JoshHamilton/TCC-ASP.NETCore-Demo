@@ -1,8 +1,73 @@
 ﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+// jQuery version of the page client-side behaviors
+$(document).ready(function() {
+    var $table = $('table');
+    if ($table.length) {
+        var $tableHeader = $table.find('thead');
+        if ($tableHeader.length) {
+            $tableHeader.css({
+                position: 'sticky',
+                top: '0',
+                zIndex: '1000'
+            });
 
+            // Default sort by "Class Name" (assuming it's the first column)
+            $table.data('sort-asc', true); // Set initial sort order to ascending
+            sortTable($table, 0);
+            updateSortIcons($tableHeader, 0, true); // Update sort icons on load
+
+            $tableHeader.on('click', function(event) {
+                var $target = $(event.target).closest('th');
+                if ($target.length) {
+                    var index = $target.index();
+                    // Exclude the last column from sorting only on the /Classes page
+                    if ($target.hasClass('not-sortable')) {
+                        return;
+                    }
+                    var isAscending = $table.data('sort-asc');
+                    
+                    // Toggle sort order before sorting
+                    $table.data('sort-asc', !isAscending);
+                    
+                    // Sort table and update icons
+                    sortTable($table, index);
+                    updateSortIcons($tableHeader, index, !isAscending);
+                }
+            });
+        }
+    }
+});
+
+function sortTable($table, columnIndex) {
+    var $rows = $table.find('tbody tr').toArray();
+    var isAscending = $table.data('sort-asc');
+    $rows.sort(function(rowA, rowB) {
+        var cellA = $(rowA).children().eq(columnIndex).text();
+        var cellB = $(rowB).children().eq(columnIndex).text();
+        return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+    });
+    $.each($rows, function(index, row) {
+        $table.children('tbody').append(row);
+    });
+}
+
+function updateSortIcons($tableHeader, columnIndex, isAscending) {
+    $tableHeader.find('th').each(function(index) {
+        var $th = $(this);
+        $th.removeClass('active-sort-asc active-sort-desc');
+        $th.find('.sort-icon').remove();
+        if (index === columnIndex) {
+            var $sortIcon = $('<span>').addClass('sort-icon').html(isAscending ? '&#9660;' : '&#9650;'); // Down and up arrows
+            $th.append($sortIcon);
+            $th.addClass(isAscending ? 'active-sort-desc' : 'active-sort-asc');
+        }
+    });
+}
+
+// An all-browser compatible JavaScript version that performs the same behaviors as the jQuery code above.
+/*
 document.addEventListener('DOMContentLoaded', function() {
     var table = document.querySelector('table');
     if (table) {
@@ -68,3 +133,6 @@ function updateSortIcons(tableHeader, columnIndex, isAscending) {
         }
     });
 }
+
+*/
+
