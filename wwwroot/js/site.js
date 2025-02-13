@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (target && target.tagName === 'TH') {
                     var index = Array.prototype.indexOf.call(target.parentNode.children, target);
+                    // Exclude the last column from sorting
+                    if (index === target.parentNode.children.length - 1) {
+                        return;
+                    }
                     var isAscending = table.getAttribute('data-sort-asc') === 'true';
                     
                     // Toggle sort order before sorting
