@@ -41,6 +41,11 @@ h1 {
   background-color: #023059; /* Different color for the header */
   color: #F2F2F2;
   padding: 10px;
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.table th:hover {
+  color: #F2B84B; /* Change text color on hover */
 }
 
 .table td {
