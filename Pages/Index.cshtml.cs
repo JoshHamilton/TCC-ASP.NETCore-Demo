@@ -18,10 +18,12 @@ namespace WebAppDemo.Pages
         }
 
         public IList<Class> Classes { get; set; }
+        public string MetaDescription { get; set; }
 
         public async Task OnGetAsync()
         {
             Classes = await _context.Classes.ToListAsync();
+            MetaDescription = "View all classes at Tacoma College.";
         }
     }
 }

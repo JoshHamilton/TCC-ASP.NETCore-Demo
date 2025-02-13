@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebAppDemo</title>
+    @{
+        var defaultMetaDescription = "Demo of developing with C#, ASP.NET Core, Razor Pages, SQL Database, Bootstrap, HTML, CSS, JavaScript, jQuery";
+        var metaDescription = string.IsNullOrEmpty(ViewData["MetaDescription"] as string) ? defaultMetaDescription : ViewData["MetaDescription"];
+    }
+    <meta name="description" content="@metaDescription" />
+    <title>@ViewData["Title"] - Josh Hamilton Web Application Demo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
