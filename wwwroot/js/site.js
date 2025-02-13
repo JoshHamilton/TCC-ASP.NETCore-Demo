@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (target && target.tagName === 'TH') {
                     var index = Array.prototype.indexOf.call(target.parentNode.children, target);
-                    // Exclude the last column from sorting
-                    if (index === target.parentNode.children.length - 1) {
+                    // Exclude the last column from sorting only on the /Classes page
+                    if (target.classList.contains('not-sortable')) {
                         return;
                     }
                     var isAscending = table.getAttribute('data-sort-asc') === 'true';
