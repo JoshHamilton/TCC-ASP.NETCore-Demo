@@ -1,4 +1,4 @@
-# WebAppDemo
+# TCC-ASP.NETCore-Demo
 
 This web application is a demo project developed using ASP.NET Core Razor Pages. It showcases the development of a web application with a focus on managing class information for Tacoma Community College. The application uses a SQL database for data storage and incorporates various technologies and libraries to provide a rich user experience.
 
@@ -75,8 +75,8 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/yourusername/WebAppDemo.git
-   cd WebAppDemo
+   git clone https://github.com/yourusername/TCC-ASP.NETCore-Demo.git
+   cd TCC-ASP.NETCore-Demo
    ```
 
 2. **Install dependencies**:
