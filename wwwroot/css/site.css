@@ -48,6 +48,10 @@ h1 {
   color: #F2B84B; /* Change text color on hover */
 }
 
+.table th.active-sort {
+  color: #F2B84B; /* Active sort color */
+}
+
 .table td {
   background-color: #F2F2F2;
   color: #023059;
