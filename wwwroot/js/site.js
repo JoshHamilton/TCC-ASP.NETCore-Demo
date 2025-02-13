@@ -15,18 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
             // Default sort by "Class Name" (assuming it's the first column)
             table.setAttribute('data-sort-asc', 'true'); // Set initial sort order to ascending
             sortTable(table, 0);
-            tableHeader.querySelector('th').classList.add('active-sort'); // Apply active sort class on load
+            updateSortIcons(tableHeader, 0, true); // Update sort icons on load
 
             tableHeader.addEventListener('click', function(event) {
-                if (event.target.tagName === 'TH') {
-                    var index = Array.prototype.indexOf.call(event.target.parentNode.children, event.target);
+                var target = event.target;
+                while (target && target.tagName !== 'TH') {
+                    target = target.parentNode;
+                }
+                if (target && target.tagName === 'TH') {
+                    var index = Array.prototype.indexOf.call(target.parentNode.children, target);
+                    var isAscending = table.getAttribute('data-sort-asc') === 'true';
+                    
+                    // Toggle sort order before sorting
+                    table.setAttribute('data-sort-asc', !isAscending);
+                    
+                    // Sort table and update icons
                     sortTable(table, index);
-
-                    // Remove active class from all headers and add to the clicked one
-                    Array.prototype.forEach.call(tableHeader.querySelectorAll('th'), function(th) {
-                        th.classList.remove('active-sort');
-                    });
-                    event.target.classList.add('active-sort');
+                    updateSortIcons(tableHeader, index, !isAscending);
                 }
             });
         }
@@ -44,5 +49,18 @@ function sortTable(table, columnIndex) {
     rows.forEach(function(row) {
         table.querySelector('tbody').appendChild(row);
     });
-    table.setAttribute('data-sort-asc', !isAscending);
+}
+
+function updateSortIcons(tableHeader, columnIndex, isAscending) {
+    Array.prototype.forEach.call(tableHeader.querySelectorAll('th'), function(th, index) {
+        th.classList.remove('active-sort-asc', 'active-sort-desc');
+        th.querySelector('.sort-icon')?.remove();
+        if (index === columnIndex) {
+            var sortIcon = document.createElement('span');
+            sortIcon.classList.add('sort-icon');
+            sortIcon.innerHTML = isAscending ? '&#9660;' : '&#9650;'; // Down and up arrows
+            th.appendChild(sortIcon);
+            th.classList.add(isAscending ? 'active-sort-desc' : 'active-sort-asc');
+        }
+    });
 }

@@ -42,6 +42,7 @@ h1 {
   color: #F2F2F2;
   padding: 10px;
   cursor: pointer; /* Add cursor pointer */
+  position: relative; /* Add position relative for icon positioning */
 }
 
 .table th:hover {
@@ -49,6 +50,16 @@ h1 {
 }
 
 .table th.active-sort {
+  color: #F2B84B; /* Active sort color */
+}
+
+.table th .sort-icon {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.table th.active-sort-asc,
+.table th.active-sort-desc {
   color: #F2B84B; /* Active sort color */
 }
 
