@@ -36,6 +36,27 @@ $(document).ready(function() {
                     updateSortIcons($tableHeader, index, !isAscending);
                 }
             });
+
+            $tableHeader.on('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    var $target = $(event.target).closest('th');
+                    if ($target.length) {
+                        var index = $target.index();
+                        // Exclude the last column from sorting only on the /Classes page
+                        if ($target.hasClass('not-sortable')) {
+                            return;
+                        }
+                        var isAscending = $table.data('sort-asc');
+                        
+                        // Toggle sort order before sorting
+                        $table.data('sort-asc', !isAscending);
+                        
+                        // Sort table and update icons
+                        sortTable($table, index);
+                        updateSortIcons($tableHeader, index, !isAscending);
+                    }
+                }
+            });
         }
     }
 });
@@ -101,6 +122,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Sort table and update icons
                     sortTable(table, index);
                     updateSortIcons(tableHeader, index, !isAscending);
+                }
+            });
+
+            tableHeader.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    var target = event.target;
+                    while (target && target.tagName !== 'TH') {
+                        target = target.parentNode;
+                    }
+                    if (target && target.tagName === 'TH') {
+                        var index = Array.prototype.indexOf.call(target.parentNode.children, target);
+                        // Exclude the last column from sorting only on the /Classes page
+                        if (target.classList.contains('not-sortable')) {
+                            return;
+                        }
+                        var isAscending = table.getAttribute('data-sort-asc') === 'true';
+                        
+                        // Toggle sort order before sorting
+                        table.setAttribute('data-sort-asc', !isAscending);
+                        
+                        // Sort table and update icons
+                        sortTable(table, index);
+                        updateSortIcons(tableHeader, index, !isAscending);
+                    }
                 }
             });
         }
