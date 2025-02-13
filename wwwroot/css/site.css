@@ -210,15 +210,21 @@ table tbody tr:hover td a {
   height: 200px;
   color: #f2f2f2;
 }
+
 .header-image h1 {
-  padding: 2rem;
-  padding-top: 6rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
   font-weight: 900;
   letter-spacing: -1;
   color: #f2f2f2;
   text-shadow: 2px 2px 4px #000000; /* Add text shadow for better visibility */
 }
+
 .header-image p {
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
   text-shadow: 2px 2px 4px #000000; /* Add text shadow for better visibility */
 }
 
@@ -226,5 +232,22 @@ table tbody tr:hover td a {
   .header-image {
     background-image: url('../images/campus-walkway-hero.jpg');
     height: 400px;
+  }
+  .header-image h1 {
+    font-size: 2rem;
+    padding-top: 4rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-image {
+    background-image: url('../images/campus-walkway-hero.jpg');
+    height: 400px;
+  }
+  .header-image h1 {
+    font-size: 3rem;
+    padding-top: 6rem;
+    padding: 2rem;
   }
 }
