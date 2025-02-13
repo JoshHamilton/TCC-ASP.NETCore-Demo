@@ -3,7 +3,81 @@
 @{
     ViewData["Title"] = "Technical Overview";
 }
-<main role="main">
-    <h1>@ViewData["Title"]</h1>
-    <p>Use this page to detail your site's technical overview.</p>
+<main role="main" class="container">
+    <h1 class="mt-4">@ViewData["Title"]</h1>
+    <section>
+        <h2>Overview</h2>
+        <p>This web application is a demo project developed using ASP.NET Core. It showcases the development of a web application with a focus on managing class information for Tacoma Community College. The application uses a SQL database for data storage and incorporates various technologies and libraries to provide a rich user experience.</p>
+    </section>
+    <section>
+        <h2>Technologies Used</h2>
+        <ul>
+            <li><strong>ASP.NET Core</strong>: The primary framework used for building the web application.</li>
+            <li><strong>Razor Pages</strong>: A page-based programming model for building web UI.</li>
+            <li><strong>Entity Framework Core</strong>: An Object-Relational Mapper (ORM) used for database operations.</li>
+            <li><strong>SQLite</strong>: The database engine used for data storage.</li>
+            <li><strong>Bootstrap</strong>: A front-end framework for responsive design and styling.</li>
+            <li><strong>jQuery</strong>: A JavaScript library used for client-side scripting.</li>
+            <li><strong>HTML, CSS, JavaScript</strong>: Standard web technologies used for building the user interface.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Project Structure</h2>
+        <p>The project follows a standard ASP.NET Core structure with the following key directories and files:</p>
+        <ul>
+            <li><strong>Data</strong>: Contains the <code>ApplicationDbContext</code> class for database context.</li>
+            <li><strong>Migrations</strong>: Contains migration files for database schema changes.</li>
+            <li><strong>Models</strong>: Contains the <code>Class</code> model representing the class entity.</li>
+            <li><strong>Pages</strong>: Contains Razor Pages and their associated page models.</li>
+            <li><strong>wwwroot</strong>: Contains static files such as CSS, JavaScript, and images.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Database</h2>
+        <p>The application uses SQLite as the database engine. The database context is defined in the <code>ApplicationDbContext</code> class, and the <code>Class</code> model represents the class entity with properties such as <code>Id</code>, <code>ClassName</code>, <code>ClassDescription</code>, <code>Units</code>, and <code>Quarter</code>.</p>
+    </section>
+    <section>
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Class Management</strong>:
+                <ul>
+                    <li>Create, update, delete, and view class information.</li>
+                    <li>Import class data from a CSV file.</li>
+                    <li>Export class data to a CSV file.</li>
+                    <li>Delete all class records.</li>
+                </ul>
+            </li>
+            <li><strong>Responsive Design</strong>: The application uses Bootstrap for responsive design, ensuring a consistent user experience across different devices and screen sizes.</li>
+            <li><strong>Client-Side Scripting</strong>: jQuery is used for client-side scripting, including table sorting and other interactive features.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Razor Pages</h2>
+        <p>The application uses Razor Pages for building the web UI. Key pages include:</p>
+        <ul>
+            <li><strong>Index</strong>: Displays a list of classes with options to create, edit, delete, import, and export class data.</li>
+            <li><strong>Create</strong>: Allows users to create a new class.</li>
+            <li><strong>Edit</strong>: Allows users to edit an existing class.</li>
+            <li><strong>Delete</strong>: Allows users to delete a class.</li>
+            <li><strong>Import</strong>: Allows users to import class data from a CSV file.</li>
+            <li><strong>Export</strong>: Allows users to export class data to a CSV file.</li>
+            <li><strong>DeleteAll</strong>: Allows users to delete all class records.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Configuration</h2>
+        <p>The application configuration is managed through the <code>appsettings.json</code> and <code>appsettings.Development.json</code> files. These files contain settings for database connections, logging, and other application-specific configurations.</p>
+    </section>
+    <section>
+        <h2>Logging</h2>
+        <p>The application uses the built-in logging framework provided by ASP.NET Core. Logging settings are configured in the <code>appsettings.json</code> file, and logs are generated for various events and errors.</p>
+    </section>
+    <section>
+        <h2>Security</h2>
+        <p>The application includes basic security features such as HTTPS redirection and anti-forgery token validation. These features help protect the application from common security threats.</p>
+    </section>
+    <section>
+        <h2>Deployment</h2>
+        <p>The application can be deployed to any hosting environment that supports ASP.NET Core. The <code>Properties/launchSettings.json</code> file contains settings for running the application locally in development mode.</p>
+    </section>
 </main>
