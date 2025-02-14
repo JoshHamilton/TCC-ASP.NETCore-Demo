@@ -15,6 +15,7 @@ namespace WebAppDemo.Pages
         {
             _context = context;
             Classes = new List<Class>();
+            MetaDescription = string.Empty;
         }
 
         public IList<Class> Classes { get; set; }

@@ -13,11 +13,12 @@ namespace WebAppDemo.Pages.Classes
         {
             _context = context;
             Class = new Class { Units = 0.0m }; // Initialize the Units property with a default value of 0.0
+            ReturnUrl = string.Empty;
         }
 
-        public IActionResult OnGet(string returnUrl = null)
+        public IActionResult OnGet(string? returnUrl = null)
         {
-            ReturnUrl = returnUrl;
+            ReturnUrl = returnUrl ?? string.Empty;
             return Page();
         }
 

@@ -18,7 +18,7 @@
     <a asp-page="./DeleteAll" class="btn btn-danger" role="button">Delete All</a>
 </p>
 
-@if (Model.Classes.Count == 0)
+@if (Model.Classes == null || Model.Classes.Count == 0)
 {
     <p>No classes scheduled.</p>
 }
