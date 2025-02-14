@@ -74,27 +74,36 @@ The application can be deployed to any hosting environment that supports ASP.NET
 To get started with the project, follow these steps:
 
 1. **Clone the repository**:
+
    ```sh
    git clone https://github.com/yourusername/TCC-ASP.NETCore-Demo.git
    cd TCC-ASP.NETCore-Demo
-   ```
+   ```sh
 
 2. **Install dependencies**:
+
    ```sh
    dotnet restore
-   ```
+   ```sh
 
 3. **Update the database**:
+
    ```sh
    dotnet ef database update
-   ```
+   ```sh
 
 4. **Run the application**:
+
    ```sh
    dotnet run
-   ```
+   ```sh
+
+   ```sh
+   dotnet run
+   ```sh
 
 5. **Open the application in your browser**:
+
    Navigate to `https://localhost:<port>` to view the application. The port number can be found in the `Properties/launchSettings.json` file under the `applicationUrl` setting.
 
 ## License
