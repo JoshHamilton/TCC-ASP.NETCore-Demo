@@ -247,6 +247,11 @@ table tbody tr:hover td a {
   color: #ffffff; /* Increase text contrast */
 }
 
+.no-classes-scheduled {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
   .header-image {
     background-image: url('../images/campus-walkway-hero.jpg');

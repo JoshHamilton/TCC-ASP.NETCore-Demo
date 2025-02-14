@@ -13,7 +13,9 @@
 
     @if (Model.Classes.Count == 0)
     {
-        <p>No classes scheduled.</p>
+        <div class="alert alert-info no-classes-scheduled" role="alert">
+            No classes scheduled.
+        </div>
     }
     else
     {
